@@ -24,7 +24,7 @@ function getRepositories() {
 
 function getCommits() {
   const req = new XMLHttpRequest();
-  req.addEventListener();
+  req.addEventListener("load", displayCommits);
   req.open("GET", 'https://api.github.com/repos' + name + '/commits');
   req.send();
 }

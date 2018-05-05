@@ -23,7 +23,7 @@ function getRepositories() {
 }
 
 function getCommits(el) {
-  const name = el.dataset.repo.name;
+  const name = el.dataset.repo;
   console.log(el.dataset.repo.name);
   const username = el.dataset.repo.author.login;
   const req = new XMLHttpRequest();

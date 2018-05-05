@@ -31,7 +31,7 @@ function getCommits(el) {
   req.send();
 }
 
-function getBranches() {
+function getBranches(el) {
   const name = el.dataset.repo;
   const username = el.dataset.user;
   const req = new XMLHttpRequest();

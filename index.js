@@ -6,7 +6,7 @@ function displayRepositories() {
 
 function displayCommits() {
   const commits = JSON.parse(this.responseText);
-  const commitsList = `<ul>${commits.map(commit => '<li>' + commit.commit + commit.author.login + ' - ' + commit.commit.message + '</li>').join('')}</ul>`;
+  const commitsList = `<ul>${commits.map(commit => '<li>' + commit.commit.author.name + commit.author.login + ' - ' + commit.commit.message + '</li>').join('')}</ul>`;
   document.getElementById("details").innerHTML = commitsList
 }
 

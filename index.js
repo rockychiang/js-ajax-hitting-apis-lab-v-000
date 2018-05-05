@@ -34,6 +34,6 @@ function getCommits(el) {
 function getBranches() {
   const req = new XMLHttpRequest();
   req.addEventListener();
-  req.open("GET", 'https://api.github.com/repos/' + name + '/branches');
+  req.open("GET", 'https://api.github.com/repos/' + username + '/' + name + '/branches');
   req.send();
 }

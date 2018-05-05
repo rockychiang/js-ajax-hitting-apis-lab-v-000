@@ -12,7 +12,7 @@ function displayCommits() {
 
 function displayBranches() {
   const branches = JSON.parse(this.responseText);
-  const branchesList = `<ul>${branches.map(branch => '<li>' + branch`;
+  const branchesList = `<ul>${branches.map(branch => '<li>' + branch.name`;
 }
 
 function getRepositories() {

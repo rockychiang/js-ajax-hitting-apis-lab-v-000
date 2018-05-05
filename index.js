@@ -1,0 +1,36 @@
+function displayRepositories() {
+  const repos = JSON.parse(this.responseText);
+  const repoList = `<ul>${repos.map(r => '<li>' + r.name + ' - <a href="#" data-repo="' + r.name + '" onclick="getCommits(this)">Get Commits</a></li>').join('')}</ul>`;
+  document.getElementById("repositories").innerHTML = repoList;
+}
+
+function displayCommits() {
+  const commits = JSON.parse(this.responseText);
+  const commitsList = `<ul>${commits.map(commit => '<li>' + commit.author.login + ' - ' + commit.commit.message + '</li>').join('')}</ul>`;
+  document.getElementById("details").innerHTML = commitsList
+}
+
+function displayBranches() {
+  
+}
+
+function getRepositories() {
+  const req = new XMLHttpRequest();
+  req.addEventListener();
+  req.open("GET", 'https://api.github.com/users/' + name + '/repos');
+  req.send();
+}
+
+function getCommits() {
+  const req = new XMLHttpRequest();
+  req.addEventListener();
+  req.open("GET", 'https://api.github.com/repos' + name + '/commits');
+  req.send();
+}
+
+function getBranches() {
+  const req = new XMLHttpRequest();
+  req.addEventListener();
+  req.open("GET", 'https://api.github.com/repos' + name + '/branches');
+  req.send();
+}

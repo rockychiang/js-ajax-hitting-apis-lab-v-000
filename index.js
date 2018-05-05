@@ -11,8 +11,8 @@ function displayCommits() {
 }
 
 function displayBranches() {
-  const branches = JSON.parse(this.responseText)
-  
+  const branches = JSON.parse(this.responseText);
+  const branchesList = ``;
 }
 
 function getRepositories() {
